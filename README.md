@@ -7,7 +7,7 @@ Make sure to change the IPs in [start.sh](zookeeper_installer/start.sh), as well
 Then you need to create the executable JAR for the captain ahab runner. This can be easily done by using IntelliJ IDEA. 
 - Go to `Project Structure` - `Modules` - `+` - `JAR or directories...` and add the non-executable [CaptainAhab](https://github.com/insumity/captainahab) JAR.
 - Go to `Project Structure` - `Artifacts` - `+` - `JAR` - `From module with dependencies...` and do as seen below:
-![creating_artifact](creating_artifact.png)
+![creating_artifact](../media/creating_artifact.png)
 - Go `Build` - `Build Artifacts...` - `Build`
 
 The above steps generate the `captainahabrunner.jar`. You can then just say `java -jar captainahabrunner.jar configuration.yaml` from a server `s'` not in `S`, to start a ZooKeeper cluster with clients, while at the same time CaptainAhab is injecting network partitions. The configuration [file](configuration.yaml) can be used to configure how many clients we want to access the ZooKeeper cluster at the sasme time and how many network partitions are going to take place, as well as how often.
